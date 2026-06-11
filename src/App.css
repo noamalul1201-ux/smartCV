@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #1a3c6b, #2e86de);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.upload-section {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.upload-section h2 {
+  color: #1a3c6b;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 2px dashed #2e86de;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+button {
+  background: #2e86de;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #1a3c6b;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.error {
+  background: #ffe0e0;
+  color: #c00;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.results {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.score-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #1a3c6b, #2e86de);
+  color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.score-circle span {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.breakdown-item span:first-child {
+  width: 120px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.progress-bar {
+  flex: 1;
+  background: #e0e0e0;
+  border-radius: 4px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: #2e86de;
+  border-radius: 4px;
+  transition: width 0.5s;
+}
+
+.feedback-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.strengths, .weaknesses, .tips, .keywords {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.strengths h3 { color: #27ae60; }
+.weaknesses h3 { color: #e67e22; }
+.tips h3 { color: #2e86de; }
+.keywords h3 { color: #8e44ad; }
+
+ul {
+  padding-right: 20px;
+  margin-top: 8px;
+}
+
+li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+}
